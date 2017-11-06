@@ -74,20 +74,20 @@ public class BlogQueryService extends QueryService<Blog> {
      */
     private Specifications<Blog> createSpecification(BlogCriteria criteria) {
         Specifications<Blog> specification = Specifications.where(null);
-        if (criteria != null) {
-            if (criteria.getId() != null) {
-                specification = specification.and(buildSpecification(criteria.getId(), Blog_.id));
-            }
-            if (criteria.getTitle() != null) {
-                specification = specification.and(buildStringSpecification(criteria.getTitle(), Blog_.title));
-            }
-            if (criteria.getDesc() != null) {
-                specification = specification.and(buildStringSpecification(criteria.getDesc(), Blog_.desc));
-            }
-            if (criteria.getPublicDate() != null) {
-                specification = specification.and(buildRangeSpecification(criteria.getPublicDate(), Blog_.publicDate));
-            }
-        }
+//        if (criteria != null) {
+//            if (criteria.getId() != null) {
+//                specification = specification.and(buildSpecification(criteria.getId(), Blog_.id));
+//            }
+//            if (criteria.getTitle() != null) {
+//                specification = specification.and(buildStringSpecification(criteria.getTitle(), Blog_.title));
+//            }
+//            if (criteria.getDesc() != null) {
+//                specification = specification.and(buildStringSpecification(criteria.getDesc(), Blog_.desc));
+//            }
+//            if (criteria.getPublicDate() != null) {
+//                specification = specification.and(buildRangeSpecification(criteria.getPublicDate(), Blog_.publicDate));
+//            }
+//        }
         return specification;
     }
 
