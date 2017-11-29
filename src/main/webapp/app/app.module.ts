@@ -12,7 +12,7 @@ import { ScaffoldEntityModule } from './entities/entity.module';
 
 import { customHttpProvider } from './blocks/interceptor/http.provider';
 import { PaginationConfig } from './blocks/config/uib-pagination.config';
-
+import { MarkdownModule } from 'angular2-markdown';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 
 import {
@@ -36,6 +36,7 @@ import {
         ScaffoldAdminModule,
         ScaffoldAccountModule,
         ScaffoldEntityModule,
+        MarkdownModule.forRoot()
         // jhipster-needle-angular-add-module JHipster will add new module here
     ],
     declarations: [

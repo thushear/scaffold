@@ -19,10 +19,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.net.URI;
 import java.net.URISyntaxException;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 /**
@@ -40,9 +42,21 @@ public class BlogResource {
 
     private final BlogQueryService blogQueryService;
 
+    @Resource
+    private Map resourceMap;
+
+
     public BlogResource(BlogService blogService, BlogQueryService blogQueryService) {
         this.blogService = blogService;
         this.blogQueryService = blogQueryService;
+    }
+
+
+    @GetMapping("/test")
+    @Timed
+    public ResponseEntity getTest() {
+
+        return new ResponseEntity(resourceMap,HttpStatus.OK);
     }
 
     /**

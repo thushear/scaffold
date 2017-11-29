@@ -1,4 +1,23 @@
 # 快速开发脚手架
+angular2-markdown
+npm install angular2-markdown  --save
+import { MarkdownModule } from 'angular2-markdown';
+...
+
+@NgModule({
+   ...
+   imports: [MarkdownModule.forRoot(), ... ],
+    ...
+})
+
+"styles": [
+  "styles.css",
++  "../node_modules/prismjs/themes/prism-okaidia.css"
+],
+
+<markdown>
+## Markdown h2 content
+</markdown>
 
 # scaffold
 This application was generated using JHipster 4.10.2, you can find documentation and help at [http://www.jhipster.tech/documentation-archive/v4.10.2](http://www.jhipster.tech/documentation-archive/v4.10.2).
